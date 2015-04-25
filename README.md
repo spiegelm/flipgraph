@@ -2,7 +2,37 @@
 
 Flipgraph is a program for generation of flip graphs. It is part of my Master's thesis.
 
-## What is a Flip Graph?
+## Generating a Flip Graph
+
+The following code snippet shows how to compute the flip graph for triangulations with `n` vertices.
+
+```
+vector<vector<int> > flip_graph;
+compute_flip_graph(n, flip_graph);
+```
+
+## Working with Triangulations
+
+Create a canonical triangulation with `n` vertices.
+```
+Triangulation triangulation(n);
+```
+
+Flip the edge `edge` of the triangulation `triangualtion`.
+```
+if (triangulation.is_flippable(edge)) {
+  triangulation.flip(edge);
+}
+```
+
+Checking whether two triangualtions `triangualtion_a` and `triangulation_b` are isomorphic.
+```
+Code code_a(triangulation_a);
+Code code_b(triangulation_b);
+bool isomorphic = (code_a == code_b);
+```
+
+## What are Triangulations, Edge Flips and Flip Graphs?
 
 A maximal planar graph is called a *triangulation* since all of its faces are triangles.
 We consider abstract unlabeled triangulations, that is, we do not distinguish between triangulations in the same isomorphism class.
