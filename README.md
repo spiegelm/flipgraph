@@ -18,8 +18,9 @@ Create a canonical triangulation with `n` vertices.
 Triangulation triangulation(n);
 ```
 
-Flip the edge `edge` of the triangulation `triangualtion`.
+Flip the `i`-th edge of the triangulation `triangualtion`.
 ```
+Edge* edge = triangulation.edge(i);
 if (triangulation.is_flippable(edge)) {
   triangulation.flip(edge);
 }
