@@ -12,8 +12,11 @@
 #include <map>
 #include <utility>
 
-// computes the flip graph on all triangulations with n vertices.
+// computes the flip graph on all triangulations with n vertices
 void compute_flip_graph(int n, std::vector<std::vector<int> >& graph);
+
+// writes the specified flip graph to the specified stream
+void write_flip_graph(std::vector<std::vector<int> >& graph, std::ostream& output_stream);
 
 #endif
 

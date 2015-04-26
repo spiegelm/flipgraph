@@ -26,7 +26,7 @@
  *  - only flip edges that are different in the context of isomorphism
  * ---------------------------------------------------------------------- */
  
- void compute_flip_graph(int n, std::vector<std::vector<int> >& graph) {
+void compute_flip_graph(int n, std::vector<std::vector<int> >& graph) {
     graph.clear();
     int count = 0;
 
@@ -82,7 +82,21 @@
 
         delete triangulation;
     }
- }
+}
+
+/* ---------------------------------------------------------------------- *
+ * write functions
+ * ---------------------------------------------------------------------- */
+
+void write_flip_graph(std::vector<std::vector<int> >& graph, std::ostream& output_stream) {
+    int size = (int) graph.size();
+    for (int i = 0; i < size; ++i) {
+        int degree = (int) graph[i].size();
+        output_stream << i << ":";
+        for (int j = 0; j < degree; ++j) { output_stream << " " << graph[i][j]; }
+        output_stream << std::endl;
+    }
+}
 
 #endif
 
