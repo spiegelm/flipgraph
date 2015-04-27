@@ -1,5 +1,5 @@
-#include "fg/options.hpp"
-#include "fg/flipgraph.hpp"
+#include "src/options.hpp"
+#include "src/flipgraph.hpp"
 
 #include <vector>
 #include <iostream>
