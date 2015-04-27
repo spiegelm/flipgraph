@@ -15,6 +15,7 @@
 #include <map>
 #include <utility>
 #include <iostream>
+#include <algorithm>
 
 /* ---------------------------------------------------------------------- *
  * flip graph
