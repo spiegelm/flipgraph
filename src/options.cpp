@@ -5,6 +5,7 @@
  * ---------------------------------------------------------------------- */
 
  #include "options.hpp"
+ #include <algorithm>
 
 char* get_cmd_option(int argc, char* argv[], const std::string& option) {
     char** begin = argv;

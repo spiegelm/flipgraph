@@ -1,5 +1,5 @@
 CC       = g++
-CC_FLAGS = -O3
+CC_FLAGS = -O3 -std=c++11
 MAIN     = main.cpp
 SRC      = $(wildcard src/*.cpp)
 OBJ      = $(addprefix obj/,$(notdir $(SRC:.cpp=.o)))
